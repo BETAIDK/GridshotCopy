@@ -9,6 +9,9 @@ public class Shoot : MonoBehaviour
     public float shootSpeed = 10;
     public Rigidbody bulletrb;
     public Camera cam;
+    public Transform target;
+    
+    private int x, y;
     
 
     // Start is called before the first frame update
@@ -34,6 +37,18 @@ public class Shoot : MonoBehaviour
         if (Physics.Raycast(shootPoint.transform.position, shootPoint.transform.forward, out hit))
         {
             Debug.Log(hit.transform.name);
+            if (hit.transform.name == "Target(Clone)")
+            {
+                Destroy(hit.transform.gameObject);
+                SpawnRandom();
+            }
         }
+    }
+    
+    void SpawnRandom()
+    {
+        x = Random.Range(-1, 3);
+        y = Random.Range(1, 3);
+        Instantiate(target, new Vector3(x, y, 2), target.rotation);
     }
 }
