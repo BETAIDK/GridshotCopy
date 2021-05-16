@@ -15,7 +15,6 @@ public class RandomTarget : MonoBehaviour
     {
         x = Random.Range(-1, 3);
         y = Random.Range(1, 3);
-        //randomInt = Random.Range(0, spawnees.Length);
         Instantiate(target, new Vector3(x, y, 2), target.rotation);
     }
 
