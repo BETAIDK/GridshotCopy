@@ -1585,6 +1585,7 @@ MonoBehaviour:
   shootSpeed: 10
   bulletrb: {fileID: 5178526631871467293, guid: a64ab746d80ddcb46ad6caac12b23df5, type: 3}
   cam: {fileID: 0}
+  target: {fileID: 2124322550955958487, guid: 57b4c2a55751e7b40a571700a34c1b49, type: 3}
 --- !u!1 &1160608788
 GameObject:
   m_ObjectHideFlags: 0
